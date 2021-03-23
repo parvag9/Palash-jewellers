@@ -1,0 +1,111 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Featured Products Section Start */
+.product-grid{
+    text-align: center; padding: 0 0 72px; border: 1px solid rgb(0,0,0,.1);
+    overflow: hidden; position: relative; z-index: 1;
+}
+.product-grid .product-image{
+    position: relative; transition: all .3s ease 0s;
+}
+.product-grid .product-image a{
+    display: block;
+}
+.product-grid .product-imag img{
+    width: 100%; height: auto;
+}
+.product-grid .pic1{
+    opacity: 1; transition: all .3s ease-out 0s;
+}
+.product-grid:hover .pic1{
+    opacity: 0;
+}
+.product-grid .pic2{
+    opacity: 0; position: absolute; top: 0; left: 0; transition: all .3s ease-out 0s;
+}
+.product-grid:hover .pic2{
+    opacity: 1; 
+
+}
+
+
+
+
+/* Featured Products Section Start */
+
+
+
+/* Social Image Section start  */
+.card h3{
+    width: 150px; margin: 0;padding: 0; color: white; opacity: 0;
+    transform: translateY(-50%) translateX(-50%); position: absolute; top: 60%; left: 50%; z-index: 1;
+    transition: all .3s ease 0s;
+}
+.card:hover h3{
+    opacity: 1; top: 50%;
+}
+
+
+/* Social Image section end  */
+
+/* offer section start  */
+.offer-left{
+    color:black;
+    background-color: rgb(250, 164, 84);
+    background-position: center;
+    background-size: cover;
+}
+.offer-left img{
+    width: 100px;
+    height: 100px;
+    float:right;
+    display:inline;
+    border-radius: 50%;
+}
+
+.offer-right img{
+    height: 100%;
+    width: 100%;
+}
+
+
+/* offer section end  */
+
+
+/* footer section start */
+.img-thumbnail{
+    width: 300px;
+    height: 100px;
+}
+    
+.footer-right{
+    color: white;
+    background-color: rgb(110, 106, 106);
+    
+}
+.footer-left{
+    color: white;
+    background-image: url(https://images.unsplash.com/photo-1501046791521-e24baf06e55b?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80);
+    background-position: center;
+    background-size: cover;
+}
+ul {
+    list-style-type: none;
+}
+ul li a{
+    color: white;
+    padding: 4px;
+    text-decoration: none;
+}
+ul li a:hover{
+    color: rgb(255, 87, 25);
+    text-decoration: none;
+}
+.fa{
+    padding-right: 10px;
+}
+/* footer section end */
