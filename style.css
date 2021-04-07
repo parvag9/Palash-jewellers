@@ -1,111 +1,278 @@
-*{
+
+@import url('https://fonts.googleapis.com/css2?family=Tinos:wght@400;700&display=swap');
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+body{
+    font-family: 'Tinos', serif;
+}
+/* Topbar start  */
+nav{
+    background-color: #feb564;
+
+}
+nav ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+nav ul li {
+    margin-right: 5px;
+}
+li a, .dropbtn {
+    display: inline;
+    color:black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  li.dropdown {
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  .dropdown-content i{
+      padding-left: 10px;
+
+  }
+  
+  .dropdown-content a:hover {
+      background-color: #f1f1f1;}
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+/* Topbar End  */
+
 
 /* Featured Products Section Start */
-.product-grid{
-    text-align: center; padding: 0 0 72px; border: 1px solid rgb(0,0,0,.1);
-    overflow: hidden; position: relative; z-index: 1;
+.float-icons ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
-.product-grid .product-image{
-    position: relative; transition: all .3s ease 0s;
+.product-grid {
+    text-align: center;
+    padding: 0 0 72px;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    height: 300px;
 }
-.product-grid .product-image a{
+
+.product-grid .product-image {
+    position: relative;
+    transition: all .5s ease 0s;
+}
+
+.product-grid .product-image a {
     display: block;
 }
-.product-grid .product-imag img{
-    width: 100%; height: auto;
+
+.product-grid .product-imag img {
+    width: 100%;
+    height: auto;
 }
-.product-grid .pic1{
-    opacity: 1; transition: all .3s ease-out 0s;
-}
-.product-grid:hover .pic1{
+.float-icons{
+    transition: .5s ease;
     opacity: 0;
-}
-.product-grid .pic2{
-    opacity: 0; position: absolute; top: 0; left: 0; transition: all .3s ease-out 0s;
-}
-.product-grid:hover .pic2{
-    opacity: 1; 
-
-}
-
-
-
-
-/* Featured Products Section Start */
-
-
-
-/* Social Image Section start  */
-.card h3{
-    width: 150px; margin: 0;padding: 0; color: white; opacity: 0;
-    transform: translateY(-50%) translateX(-50%); position: absolute; top: 60%; left: 50%; z-index: 1;
-    transition: all .3s ease 0s;
-}
-.card:hover h3{
-    opacity: 1; top: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
 }
 
+.product-grid .pic1 {
+    opacity: 1;
+    transition: all .5s ease-out 0s;
+    backface-visibility: hidden;
+}
 
-/* Social Image section end  */
+.product-grid:hover .pic1 {
+    opacity: 1;
+    transform: scale(1.5);
+
+}
+.product-grid:hover .float-icons {
+    opacity: 1;
+
+}
+.product-content {
+    text-align: center;
+    padding: 0 0 72px;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+}
+
+/* Featured Products Section End */
+
+
+/* Vlog section Start */
+.vlog-left{
+    background-image: url(images/vlog-1.jpeg);
+    background-position: center;
+    background-size: cover;
+    min-height: 920px;
+    height: auto;
+}
+.vlog-left h1{
+    padding-top: 320px;
+}
+.card{
+    border: none;
+}
+
+/* Vlog section End */
+
+
+/* Social Media Image Section start  */
+.media{
+    background-color: #f5f5f5;
+}
+.social-image{
+    opacity: 1;
+    display: block;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+.social-text{
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+}
+.social-grid:hover .social-image{
+    opacity: 0.6;
+}
+.social-grid:hover .social-text{
+    opacity: 1;
+}
+.social-text h3{
+    text-align: center;
+    color: white;
+
+}
+
+/* Social Media Image section end  */
 
 /* offer section start  */
-.offer-left{
-    color:black;
-    background-color: rgb(250, 164, 84);
+.offer-right{
+    background-image: url(images/offer-1.jpg);
+    min-height: 664px;
+    color: black;
     background-position: center;
     background-size: cover;
 }
-.offer-left img{
-    width: 100px;
-    height: 100px;
-    float:right;
-    display:inline;
+.offer-left {
+    background-color: rgb(254,181,101);
+    min-height: 664px;
+    color: black;
+    background-position: center;
+    background-size: cover;
+}
+
+.offer-left img {
+    width: 120px;
+    height: 120px;
+    float: right;
+    display: inline;
     border-radius: 50%;
 }
-
-.offer-right img{
-    height: 100%;
-    width: 100%;
+.offer-left-content{
+    padding: 80px;
 }
-
-
+.offer-left-content p{
+    line-height: 2;
+}
 /* offer section end  */
 
 
+/* Special Services Start */
+.service{
+    height: 220px;
+}
+
+/* Special Services End */
+
+
 /* footer section start */
-.img-thumbnail{
+.align-top {
+    vertical-align: top;
+}
+.img-thumbnail {
     width: 300px;
     height: 100px;
 }
-    
-.footer-right{
+
+.footer-right {
     color: white;
     background-color: rgb(110, 106, 106);
-    
+
 }
-.footer-left{
+
+.footer-left {
     color: white;
-    background-image: url(https://images.unsplash.com/photo-1501046791521-e24baf06e55b?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80);
+    background-image: url(https://images.unsplash.com/photo-1553925441-bc065758887d?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=668&q=80);
     background-position: center;
     background-size: cover;
 }
-ul {
+
+.footer-right ul {
     list-style-type: none;
 }
-ul li a{
+
+.footer-right ul li a {
     color: white;
     padding: 4px;
     text-decoration: none;
 }
-ul li a:hover{
+
+.footer-right ul li a:hover {
     color: rgb(255, 87, 25);
     text-decoration: none;
 }
-.fa{
+tr td a {
+    color: white;
+    padding: 4px;
+    text-decoration: none;
+}
+
+
+tr td a:hover {
+    color: rgb(255, 87, 25);
+    text-decoration: none;
+}
+
+.fa {
     padding-right: 10px;
 }
+
 /* footer section end */
